@@ -11,7 +11,7 @@ const sponsored = TextStyle(
   fontWeight: FontWeight.bold,
   letterSpacing: 0.5,
 );
-const radius = 15.0;
+const radius = 1500000.0;
 
 checksponsoreindex(var index, var list) {
   var eyeonlistindex;

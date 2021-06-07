@@ -46,22 +46,27 @@ class _BuilderScreenState extends State<BuilderScreen1>
   Animation rotationAnimation;
   AnimationController _hideFabAnimation;
 
-
-
   checksponsore() {
     //eyeonlist = [];
     eyeonlist = reste.where((element) => element.sponsored == "1");
-
     if (reste.isNotEmpty) {
-      if (double.parse(reste[0].distance.toString().split(" ").first.toString()) == -1) {
+      if (double.parse(
+              reste[0].distance.toString().split(" ").first.toString()) ==
+          -1) {
         errordis =
             "Please enable the location permission to see the restaurants in 15 KM radius";
       } else {
         if (eyeonlist.isEmpty) {
-          eyeonlist = reste.where((element) => double.parse(element.distance.toString().split(" ").first.toString()) <= radius );
+          eyeonlist = reste.where((element) =>
+              double.parse(
+                  element.distance.toString().split(" ").first.toString()) <=
+              radius);
         } else {
           height_about_index = eyeonlist.length;
-          eyeonlist = (reste.where((element) => double.parse(element.distance.toString().split(" ").first.toString()) <= radius ));
+          eyeonlist = (reste.where((element) =>
+              double.parse(
+                  element.distance.toString().split(" ").first.toString()) <=
+              radius));
         }
         if (!eyeonlist.isEmpty) {
           height_about_index += eyeonlist.length;
@@ -71,10 +76,32 @@ class _BuilderScreenState extends State<BuilderScreen1>
     print(height_about_index);
   }
 
+  sortList(){
+    List<restaurant> list = [];
+    list.addAll(reste);
+    for(int i=0;i<list.length-1;i++){
+      for(int j=i+1;j<list.length;j++){
+        if(list[i].sponsored=="0" && list[j].sponsored=="0"){
+          if(double.parse(list[i].distance.split(" ").first.toString()) > double.parse(list[j].distance.split(" ").first.toString())){
+            restaurant obj = list[j];
+            list[j] = list[i];
+            list[i]=obj;
+          }
+        }
+      }
+    }
+for(var data in list){
+  print(data.distance);
+}
+    reste.clear();
+    reste.addAll(list);
+  }
+
   @override
   void initState() {
     // TODO: implement initState
     checksponsore();
+    sortList();
 
     super.initState();
     animationController =
@@ -1181,7 +1208,9 @@ class _BuilderScreenState extends State<BuilderScreen1>
                                                                       child:
                                                                           Text(
                                                                     "Distance: " +
-                                                                        reste[index].distance.toString(),
+                                                                        reste[index]
+                                                                            .distance
+                                                                            .toString(),
                                                                     maxLines: 1,
                                                                     style: TextStyle(
                                                                         letterSpacing:

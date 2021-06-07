@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>The Order Guys</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>This app doesnt requires access to play music</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Calender is doesnt required to set match reminders only used for geeting date of birth</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Used to click and send picture to friends and also used for scaning QR</string>
+	<key>NSContactsUsageDescription</key>
+	<string>This app doesnt requires contacts access to function properly.</string>
+	<key>NSContactsUsageDescription </key>
+	<string>This app doesnt requires contacts access to function properly.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app needs access to location to function properly.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Your location is required for retriving popular locations near you</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your location is required for retriving popular locations near you</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Record audio for sending audio messages</string>
+	<key>NSMotionUsageDescription</key>
+	<string>This app needs to be able to access your motion use</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Take pretty screenshots and save it to the PhotoLibrary and share images in chat</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>For Sharing images and setting your profile up </string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>doesnt use</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>io.flutter.embedded_views_preview</key>
+    <true/>
+</dict>
+</plist>
